@@ -34,18 +34,18 @@ body {
 }
 
 .bg-primary {
-    background-color: #134d00;
+    background-color: #174508;
 }
 
 a, 
 .text-primary {
-    color: #134d00;
+    color: #174508;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #0d3300;
+    color: #0f2e05;
 }
 
 /* Header */
@@ -55,10 +55,10 @@ a:focus {
     position: relative;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(rgba(255,255,255,0.6) 0%, #134d00 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: -moz-linear-gradient(rgba(255,255,255,0.6) 0%, #134d00 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: -o-linear-gradient(rgba(255,255,255,0.6) 0%, #134d00 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: linear-gradient(rgba(255,255,255,0.6) 0%, #134d00 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: -webkit-linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: -moz-linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: -o-linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

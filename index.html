@@ -320,6 +320,7 @@
     </footer>
 
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
         // Closes the menu
@@ -327,11 +328,13 @@
             e.preventDefault();
             $("#mainNav").toggleClass("active");
         });
+
         // Opens the menu
         $("#menu-toggle").click(function (e) {
             e.preventDefault();
             $("#mainNav").toggleClass("active");
         });
+
         // Scrolls to the selected menu item on the page
         $(function () {
             $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
@@ -347,8 +350,10 @@
                 }
             });
         });
+
         //#to-top button appears after scrolling
         var fixed = false;
+
         $(document).scroll(function () {
             if ($(this).scrollTop() > 250) {
                 if (!fixed) {
@@ -372,6 +377,115 @@
                 }
             }
         });
+
+      function getOffSet(){
+        // var _offset = 300;
+        // var windowHeight = window.innerHeight;
+
+        // if(windowHeight > 500) {
+        //   _offset = 200;
+        // } 
+        // if(windowHeight > 680) {
+        //   _offset = 100
+        // }
+        // if(windowHeight > 830) {
+        //   _offset = 0;
+        // }
+
+        // return _offset;
+
+        return 0;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = (typeof multiplier !== 'undefined' && multiplier > 0 && multiplier < 1) ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = (typeof multiplier !== 'undefined' && multiplier > 0 && multiplier < 1) ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        $(window).scroll(function(){
+          var firstTop = $object.offset().top,
+              pos = $(window).scrollTop(),
+              yPos = Math.round((multiplier * (firstTop - pos))/* - 186*/);              
+
+          var bg_css = 'center ' + yPos + 'px';
+
+          $object.css({"background-position" : bg_css });
+        });
+      };
+      
+      $(function(){
+        // Main Section - Background Parallax
+        background_image_parallax($(".parallax"), 0.30, false);
+        background_image_parallax_2($(".parallax"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".parallax"), 0.30, true);
+        }, true);
+
+        // function setNavbarScroll(){          
+        //   if($(document).scrollTop() > 60) {
+        //     $('.navbar').addClass("scroll");
+        //   } else {
+        //     $('.navbar').removeClass("scroll");
+        //   }
+        // }
+
+        // setNavbarScroll();
+
+        // // Detect window scroll and update navbar
+        // $(window).scroll(function(e){
+        //   setNavbarScroll();
+        // });
+        
+        // Close mobile menu after click 
+        $('#mainNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+          $('.navbar-toggler').addClass('collapsed'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#mainNav').singlePageNav();        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 400, function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
     </script>
 </body>
 </html>

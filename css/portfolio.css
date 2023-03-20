@@ -65,6 +65,10 @@ a:focus {
     -o-background-size: cover;
 }
 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: unset;
+}
+
 /* Sections */
 
 .portfolio-item {

@@ -54,12 +54,17 @@ a:focus {
     border-color: unset;
     border: none;
     background-color: #fff;
-    color: currentColor;
+    color: #333;
 }
 
-.navbar .navbar-nav .page-scroll:hover {
-    color: currentColor !important;
-    opacity: 0.8;
+.navbar .navbar-nav li a:hover {
+    color: #333 !important;
+    /* opacity: 0.8; */
+}
+
+.navbar-toggle {
+    background-color: #333;
+    border-radius: 0;
 }
 
 /* Header */

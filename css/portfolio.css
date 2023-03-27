@@ -48,6 +48,20 @@ a:focus {
     color: #0f2e05;
 }
 
+.navbar, 
+.navbar .navbar-collapse, 
+.navbar .navbar-form {
+    border-color: unset;
+    border: none;
+    background-color: #fff;
+    color: currentColor;
+}
+
+.navbar .navbar-nav .page-scroll:hover {
+    color: currentColor !important;
+    opacity: 0.8;
+}
+
 /* Header */
 
 .header {
@@ -55,18 +69,14 @@ a:focus {
     position: relative;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: -moz-linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: -o-linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: linear-gradient(rgba(255,255,255,0.6) 0%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: -webkit-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: -moz-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: -o-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: unset;
 }
 
 /* Sections */

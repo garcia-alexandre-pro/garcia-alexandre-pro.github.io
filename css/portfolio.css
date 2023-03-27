@@ -74,14 +74,14 @@ a:focus {
     position: relative;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: -moz-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: -o-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
-    background: linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center center scroll;
+    background: -webkit-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
+    background: -moz-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
+    background: -o-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
+    background: linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Sections */

@@ -119,13 +119,6 @@ footer {
     padding: 5rem 0;
 }
 
-#to-top {
-    display: none;
-    position: fixed;
-    bottom: .25rem;
-    right: .25rem;
-}
-
 /* Menu */
 
 #menu-toggle {
@@ -188,8 +181,6 @@ footer {
     border-radius: 50rem;
 }
 
-/* Custom Button Styles */
-
 .btn-dark {
     color: #fff;
     background-color: rgba(0,0,0,0.4);
@@ -214,9 +205,16 @@ footer {
         background-color: rgba(255,255,255,0.8);
     }
 
-#to-top {
+#toTop,
+#navbarToggle {
     height: 1.25rem;
     width: 1.25rem;
     padding: .75rem;
-    margin: .5rem;
+}
+
+#toTop {
+    display: none;
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
 }

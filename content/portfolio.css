@@ -44,12 +44,15 @@ a {
         color: #6397cf;
     }
 
+/* Navbar */
+
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     z-index: 1000;
+    padding: 1rem;
 }
 
     .navbar,
@@ -61,10 +64,14 @@ a {
         color: #12263b;
     }
 
-        .navbar .navbar-nav li a:hover {
-            color: #12263b !important;
-            opacity: 0.8;
+        .navbar .navbar-nav {
+            list-style: none;
         }
+
+            .navbar .navbar-nav li a:hover {
+                color: #12263b !important;
+                opacity: 0.8;
+            }
 
 .navbar-toggle {
     background-color: #12263b;
@@ -206,3 +213,10 @@ footer {
         color: #12263b;
         background-color: rgba(255,255,255,0.8);
     }
+
+#to-top {
+    height: 1.25rem;
+    width: 1.25rem;
+    padding: .75rem;
+    margin: .5rem;
+}

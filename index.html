@@ -417,6 +417,11 @@
             // });
 
             // Close mobile menu after click
+
+            $('.navbar-toggle').on('click', function () {
+                $('.navbar').toggleClass('collapsed');
+            })
+
             $('#mainNav a').on('click', function () {
                 $('.navbar').addClass('collapsed');
             })

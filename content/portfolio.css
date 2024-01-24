@@ -78,7 +78,9 @@ a {
     }
 
     .navbar .navbar-nav {
+        padding: .5rem 2rem;
         list-style: none;
+        line-height: 1.5;
     }
 
         .navbar .navbar-nav li a:hover {
@@ -182,7 +184,7 @@ a {
         opacity: 0.8;
     }
 
-.cv-item {
+.resume-item {
     margin-bottom: 2rem;
 }
 
@@ -190,6 +192,7 @@ a {
 
 footer {
     padding: 5rem 0;
+    text-align: center;
 }
 
 /* Menu */
@@ -228,7 +231,7 @@ footer {
 }
 
 .section {
-    padding: 2.5rem 0;
+    padding: 2.5rem;
 }
 
 /* Parallax */

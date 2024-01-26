@@ -414,9 +414,11 @@
                 $('.navbar').toggleClass('collapsed');
             })
 
-            $('#mainNav a').on('click', function () {
-                $('.navbar').addClass('collapsed');
-            })
+            //$('#mainNav a, body :not(#mainNav, .navbar-toggle)').on('click', function (e) {
+            //    if (!$('.navbar').hasClass('collapsed')) {
+            //        $('.navbar').addClass('collapsed');
+            //    }
+            //})
 
             // Scroll to corresponding section with animation
             $('#mainNav').singlePageNav();

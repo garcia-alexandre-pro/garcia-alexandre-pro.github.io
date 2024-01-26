@@ -37,6 +37,7 @@ h1 {
 
 .bg-primary {
     background-color: var(--primary);
+    color: var(--light);
 }
 
 .text-primary {
@@ -64,8 +65,8 @@ a {
     width: var(--navigation-drawer-width);
     border-color: unset;
     border: none;
-    background-color: var(--white);
-    color: var(--dark);
+    background-color: var(--primary);
+    color: var(--light);
     z-index: 1000;
     -webkit-transition: all .35s ease-in-out;
     -moz-transition: all .35s ease-in-out;
@@ -88,11 +89,15 @@ a {
             display: block;
             width: auto;
             padding: 0 2rem;
+            background-color: inherit;
+            color: inherit;
         }
 
             .navbar .navbar-nav li a:hover {
                 color: var(--dark) !important;
                 opacity: 0.8;
+                background-color: var(--white);
+                color: var(--dark);
             }
 
     .navbar .navbar-toggle {

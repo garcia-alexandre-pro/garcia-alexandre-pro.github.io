@@ -94,6 +94,11 @@ a {
             padding: 0 2rem;
             background-color: inherit;
             color: inherit;
+            -webkit-transition: all .16s ease-in-out;
+            -moz-transition: all .16s ease-in-out;
+            -ms-transition: all .16s ease-in-out;
+            -o-transition: all .16s ease-in-out;
+            transition: all .16s ease-in-out;
         }
 
             .navbar .navbar-nav li a:hover {
@@ -176,8 +181,39 @@ a {
         }
 }
 
-/* Header */
+/*#nav-content-highlight {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    width: calc(100% - 1rem);
+    height: 4rem;
+    background: var(--background);
+    background-attachment: fixed;
+    border-radius: 1rem 0 0 1rem;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
 
+    #nav-content-highlight:before, #nav-content-highlight:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        box-shadow: 1rem 1rem var(--background)
+    }
+
+    #nav-content-highlight:after {
+        top: 100%;
+        box-shadow: 1rem -1rem var(--background);
+    }*/
+
+/* Header */
 .header {
     display: table;
     position: relative;
@@ -250,6 +286,12 @@ footer {
     -moz-appearance: none;
     appearance: none;
     user-select: none;
+    -webkit-transition: all .16s ease-in-out;
+    -moz-transition: all .16s ease-in-out;
+    -ms-transition: all .16s ease-in-out;
+    -o-transition: all .16s ease-in-out;
+    transition: all .16s ease-in-out;
+    /*transition-property: background-color, color;*/
 }
 
 .btn-dark {

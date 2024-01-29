@@ -291,12 +291,16 @@
             if ($(this).scrollTop() > 250) {
                 if (!fixed) {
                     $('#toTop').css({
-                        opacity: 1
+                        opacity: 1,
+                        "pointer-events": "auto",
+                        cursor: "pointer"
                     });
                 }
             } else if (fixed) {
                 $('#toTop').css({
-                    opacity: 0
+                    opacity: 0,
+                    "pointer-events": "none",
+                    cursor: "default"
                 });
             }
 

@@ -319,6 +319,9 @@ footer {
     }
 
 #toTop {
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
     position: fixed;
     bottom: .5rem;
     right: .5rem;

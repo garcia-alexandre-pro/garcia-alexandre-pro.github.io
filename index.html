@@ -290,25 +290,17 @@
         $(document).scroll(function () {
             if ($(this).scrollTop() > 250) {
                 if (!fixed) {
-                    fixed = true;
-                    // $('#toTop').css({position:'fixed', display:'block'});
-                    $('#toTop').show("slow", function () {
-                        $('#toTop').css({
-                            position: 'fixed',
-                            display: 'block'
-                        });
+                    $('#toTop').css({
+                        opacity: 1
                     });
                 }
-            } else {
-                if (fixed) {
-                    fixed = false;
-                    $('#toTop').hide("slow", function () {
-                        $('#toTop').css({
-                            display: 'none'
-                        });
-                    });
-                }
+            } else if (fixed) {
+                $('#toTop').css({
+                    opacity: 0
+                });
             }
+
+            fixed = !fixed;
         });
 
         function getOffSet() {

@@ -53,7 +53,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Je me présente, Alexandre GARCIA, 28 ans</h2>
+                    <h2>Alexandre GARCIA, 28 ans, développeur .NET</h2>
                     <p class="lead">
                         <br />TODO
                     </p>
@@ -231,7 +231,7 @@
             <div class="row">
                 <div class="col-lg-12 col-lg-offset-0 text-center">
                     <div class="portfolio-item">
-                        <a href="mailto:garcia.alexandre.pro@gmail.com"><i class="fa fa-envelope-o fa-fw"></i> garcia.alexandre.pro@gmail.com</a>
+                        <a class="link" href="mailto:garcia.alexandre.pro@gmail.com"><i class="fa fa-envelope-o fa-fw"></i> garcia.alexandre.pro@gmail.com</a>
                     </div>
                     <div class="portfolio-item">
                         <a target="_blank" href="https://www.linkedin.com/in/garcia-alexandre-pro/"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
@@ -240,7 +240,7 @@
                 </div>
             </div>
         </div>
-        <a id="toTop" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        <a id="toTop" href="#top" class="btn btn-secondary btn-lg position-fixed p-1"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
@@ -271,14 +271,14 @@
             if ($(this).scrollTop() > 250) {
                 if (!fixed) {
                     $('#toTop').css({
-                        opacity: 1,
+                        bottom: ".5rem",
                         "pointer-events": "auto",
                         cursor: "pointer"
                     });
                 }
             } else if (fixed) {
                 $('#toTop').css({
-                    opacity: 0,
+                    bottom: "-2.5rem",
                     "pointer-events": "none",
                     cursor: "default"
                 });

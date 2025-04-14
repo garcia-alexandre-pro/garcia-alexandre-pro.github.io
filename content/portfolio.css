@@ -1,5 +1,5 @@
 :root {
-    --primary: #3c7dc3;
+    --primary: #2c6da3;
     --white: #fff;
     --light: #d8e5f3;
     --dark: #12263b;
@@ -71,11 +71,11 @@ a {
     background-color: var(--primary);
     color: var(--light);
     z-index: 1000;
-    -webkit-transition: all .35s ease-in-out;
-    -moz-transition: all .35s ease-in-out;
-    -ms-transition: all .35s ease-in-out;
-    -o-transition: all .35s ease-in-out;
-    transition: all .35s ease-in-out;
+    -webkit-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+    -moz-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+    -ms-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+    -o-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+    transition: all .35s cubic-bezier(.49,.07,.3,1.37);
 }
 
     .navbar.collapsed {
@@ -120,11 +120,11 @@ a {
         .navbar .navbar-toggle .hamburger {
             height: 1.5rem;
             transform: rotate(180deg);
-            -webkit-transition: all .32s ease-in-out;
-            -moz-transition: all .32s ease-in-out;
-            -ms-transition: all .32s ease-in-out;
-            -o-transition: all .32s ease-in-out;
-            transition: all .32s ease-in-out;
+            -webkit-transition: all .28s ease-in-out;
+            -moz-transition: all .28s ease-in-out;
+            -ms-transition: all .28s ease-in-out;
+            -o-transition: all .28s ease-in-out;
+            transition: all .28s ease-in-out;
         }
 
             .navbar .navbar-toggle .hamburger .icon-bar {
@@ -132,11 +132,11 @@ a {
                 height: 1px;
                 border-radius: 1px;
                 display: block;
-                -webkit-transition: all .35s ease-in-out;
-                -moz-transition: all .35s ease-in-out;
-                -ms-transition: all .35s ease-in-out;
-                -o-transition: all .35s ease-in-out;
-                transition: all .35s ease-in-out;
+                -webkit-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+                -moz-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+                -ms-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+                -o-transition: all .35s cubic-bezier(.49,.07,.3,1.37);
+                transition: all .35s cubic-bezier(.49,.07,.3,1.37);
                 background-color: var(--white) !important;
             }
 

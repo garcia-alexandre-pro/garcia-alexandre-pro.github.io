@@ -1,8 +1,8 @@
 :root {
-    --primary: #2a5d8e;
+    --primary: #2a6f85;
     --light: #d8e5f3;
-    --dark: #12263b;
-    --hyperlink-active: #6397cf;
+    --dark: #182e36;
+    --hyperlink-active: #63a7cf;
     --navigation-drawer-width: 12rem;
     --navigation-drawer-md-width: calc(100vw - 4rem);
 }
@@ -305,6 +305,12 @@ footer {
     transition: all .16s ease-in-out;
     /*transition-property: background-color, color;*/
 }
+
+    .btn:hover,
+    .btn:focus,
+    .btn:active {
+        /*box-shadow: 0 .25rem 1rem .0625rem #000c;*/
+    }
 
 .btn-dark {
     color: var(--light);

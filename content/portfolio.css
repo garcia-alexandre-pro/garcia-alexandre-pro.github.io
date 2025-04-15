@@ -99,6 +99,10 @@ a {
         left: calc(-1 * var(--navigation-drawer-width));
     }
 
+    .navbar.collapsed .navbar-nav li a {
+        pointer-events: none;
+    }
+
     .navbar .navbar-nav {
         margin-top: 5rem;
         padding: .5rem 0;

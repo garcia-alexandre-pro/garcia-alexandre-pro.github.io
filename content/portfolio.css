@@ -1,7 +1,8 @@
 :root {
-    --primary: #2a6f85;
+    --primary: #2a6b80;
+    --dark-primary: #182e36d8;
     --light: #d8e5f3;
-    --dark: #182e36;
+    --dark: #1f2c2f;
     --hyperlink-active: #63a7cf;
     --navigation-drawer-width: 12rem;
     --navigation-drawer-md-width: calc(100vw - 4rem);
@@ -43,13 +44,13 @@ h1 {
     vertical-align: middle;
 }
 
-.bg-dark {
-    background-color: var(--dark);
+.bg-dark-primary {
+    background-color: var(--dark-primary);
     color: var(--light);
 }
 
-.text-dark {
-    color: var(--dark);
+.text-dark-primary {
+    color: var(--dark-primary);
 }
 
 .bg-primary {

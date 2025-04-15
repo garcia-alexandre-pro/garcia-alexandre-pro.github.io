@@ -216,167 +216,135 @@ a {
             transform: translateX(0) translateY(0.875rem) rotate(0);
         }
 
-    @media (max-width: 768px) {
-        .navbar {
-            width: calc(var(--navigation-drawer-small-width) + var(--navigation-drawer-overflow));
-        }
-
-            .navbar.collapsed {
-                left: calc(-1 * var(--navigation-drawer-small-width));
-            }
+@media (max-width: 768px) {
+    .navbar {
+        width: calc(var(--navigation-drawer-small-width) + var(--navigation-drawer-overflow));
     }
 
-    /*#nav-content-highlight {
-    position: absolute;
-    left: 1rem;
-    top: -4rem;
-    width: calc(100% - 1rem);
-    height: 4rem;
-    background: var(--background);
-    background-attachment: fixed;
-    border-radius: 1rem 0 0 1rem;
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -ms-transition: all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+        .navbar.collapsed {
+            left: calc(-1 * var(--navigation-drawer-small-width));
+        }
 }
 
-    #nav-content-highlight:before, #nav-content-highlight:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 100%;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        box-shadow: 1rem 1rem var(--background)
+/* Header */
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(rgba(255,255,255,0.2) 50%, var(--dark-primary) 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
+    background: -moz-linear-gradient(rgba(255,255,255,0.2) 50%, var(--dark-primary) 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
+    background: -o-linear-gradient(rgba(255,255,255,0.2) 50%, var(--dark-primary) 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
+    background: linear-gradient(rgba(255,255,255,0.2) 50%, var(--dark-primary) 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Sections */
+
+.portfolio-item {
+    margin-bottom: 2.5rem;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+    .img-portfolio:hover {
+        opacity: 0.8;
     }
 
-    #nav-content-highlight:after {
-        top: 100%;
-        box-shadow: 1rem -1rem var(--background);
-    }*/
+.resume-item {
+    margin-bottom: 2rem;
+}
 
-    /* Header */
-    .header {
-        display: table;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        /*background: -webkit-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
-    background: -moz-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
-    background: -o-linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;
-    background: linear-gradient(rgba(255,255,255,0.5) 50%, #174508 100%), url(../img/bg.jpg) no-repeat center 0 scroll;*/
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+/* Footer */
+
+footer {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+/* Sections */
+
+.section {
+    padding: 2.5rem;
+}
+
+/* Parallax */
+
+.parallax {
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Buttons */
+
+.btn {
+    font-weight: 700;
+    display: inline-flex;
+    position: relative;
+    padding: .5rem .75rem;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--btn-border-radius);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    user-select: none;
+    -webkit-transition: all .16s ease-in-out;
+    -moz-transition: all .16s ease-in-out;
+    -ms-transition: all .16s ease-in-out;
+    -o-transition: all .16s ease-in-out;
+    transition: all .16s ease-in-out;
+    /*transition-property: background-color, color;*/
+}
+
+    .btn:hover,
+    .btn:focus,
+    .btn:active {
+        /*box-shadow: 0 .25rem 1rem .0625rem #000c;*/
     }
 
-    /* Sections */
+.btn-dark {
+    color: var(--light);
+    background-color: var(--dark);
+}
 
-    .portfolio-item {
-        margin-bottom: 2.5rem;
-    }
-
-    .img-portfolio {
-        margin: 0 auto;
-    }
-
-        .img-portfolio:hover {
-            opacity: 0.8;
-        }
-
-    .resume-item {
-        margin-bottom: 2rem;
-    }
-
-    /* Footer */
-
-    footer {
-        padding: 5rem 0;
-        text-align: center;
-    }
-
-    /* Sections */
-
-    .section {
-        padding: 2.5rem;
-    }
-
-    /* Parallax */
-
-    .parallax {
-        /* Parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    /* Buttons */
-
-    .btn {
-        font-weight: 700;
-        display: inline-flex;
-        position: relative;
-        padding: .5rem .75rem;
-        text-decoration: none;
-        border: none;
-        border-radius: var(--btn-border-radius);
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        user-select: none;
-        -webkit-transition: all .16s ease-in-out;
-        -moz-transition: all .16s ease-in-out;
-        -ms-transition: all .16s ease-in-out;
-        -o-transition: all .16s ease-in-out;
-        transition: all .16s ease-in-out;
-        /*transition-property: background-color, color;*/
-    }
-
-        .btn:hover,
-        .btn:focus,
-        .btn:active {
-            /*box-shadow: 0 .25rem 1rem .0625rem #000c;*/
-        }
-
-    .btn-dark {
+    .btn-dark:hover,
+    .btn-dark:focus,
+    .btn-dark:active {
         color: var(--light);
         background-color: var(--dark);
     }
 
-        .btn-dark:hover,
-        .btn-dark:focus,
-        .btn-dark:active {
-            color: var(--light);
-            background-color: var(--dark);
-        }
+.btn-light {
+    color: var(--dark);
+    background-color: var(--light);
+}
 
-    .btn-light {
+    .btn-light:hover,
+    .btn-light:focus,
+    .btn-light:active {
         color: var(--dark);
         background-color: var(--light);
     }
 
-        .btn-light:hover,
-        .btn-light:focus,
-        .btn-light:active {
-            color: var(--dark);
-            background-color: var(--light);
-        }
-
-    #toTop {
-        position: fixed;
-        pointer-events: none;
-        cursor: default;
-        bottom: -2.5rem;
-        right: .5rem;
-        padding: .625rem .5rem;
-        -webkit-transition: bottom .16s ease-in-out;
-        -moz-transition: bottom .16s ease-in-out;
-        -ms-transition: bottom .16s ease-in-out;
-        -o-transition: bottom .16s ease-in-out;
-        transition: bottom .16s ease-in-out;
-    }
+#toTop {
+    position: fixed;
+    pointer-events: none;
+    cursor: default;
+    bottom: -2.5rem;
+    right: .5rem;
+    padding: .625rem .5rem;
+    -webkit-transition: bottom .16s ease-in-out;
+    -moz-transition: bottom .16s ease-in-out;
+    -ms-transition: bottom .16s ease-in-out;
+    -o-transition: bottom .16s ease-in-out;
+    transition: bottom .16s ease-in-out;
+}

@@ -122,13 +122,13 @@ a {
         margin-top: 5rem;
         padding: .5rem 0;
         list-style: none;
-        line-height: 1.5;
+        line-height: 5;
     }
 
         .navbar .navbar-nav li a {
             display: block;
             width: auto;
-            padding: 2rem;
+            padding: 0 2rem;
             background-color: inherit;
             color: inherit;
             -webkit-transition: all .16s ease-in-out;
@@ -243,6 +243,10 @@ a {
 
         .navbar.collapsed {
             left: calc(-1 * var(--navigation-drawer-small-width));
+        }
+
+        .navbar .navbar-nav {
+            line-height: 2.5;
         }
 }
 
@@ -391,6 +395,6 @@ footer {
     transition: all .16s ease-in-out;*/
 }
 
-    /*::-webkit-scrollbar-thumb:hover {
+/*::-webkit-scrollbar-thumb:hover {
         background: var(--light);
     }*/

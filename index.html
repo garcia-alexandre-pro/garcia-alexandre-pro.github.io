@@ -206,8 +206,11 @@
             //     }
             // });
 
-            const sections = document.querySelectorAll("section");
+            const sections = document.querySelectorAll("section, header, footer");
             const navItems = document.querySelectorAll(".navbar .navbar-nav .page-scroll a");
+
+            //#toTop button appears after scrolling
+            let fixed = false;
 
             window.addEventListener("scroll", () => {
                 let current = "";
@@ -225,21 +228,37 @@
                     item.classList.remove("active");
 
                     if (item.href.endsWith(`#${current}`)) {
-                        item.classList.add("active");
+                        item.classList.add("active"); // Active menu entry
                     }
                 });
+
+                let toTopBtn = document.querySelector('#toTop');
+
+                if (window.pageYOffset > 250) {
+                    if (!fixed) {
+                        toTopBtn.style.bottom = ".5rem";
+                        toTopBtn.style.pointerEvents = "auto";
+                        toTopBtn.style.cursor = "pointer";
+                    }
+                } else if (fixed) {
+                    toTopBtn.style.bottom = "-2.5rem";
+                    toTopBtn.style.pointerEvents = "none";
+                    toTopBtn.style.cursor = "default";
+                }
+
+                fixed = !fixed;
             });
 
+            window.dispatchEvent(new Event("scroll"));
+
             // Main Section - Background Parallax
-
-            background_image_parallax($(".parallax"), 0.30, true);
-            background_image_parallax_2($(".parallax"), 0.80);
-
             // Handle window resize
             window.addEventListener('resize', function () {
                 background_image_parallax($(".parallax"), 0.30, true);
                 background_image_parallax_2($(".parallax"), 0.80);
             }, true);
+
+            window.dispatchEvent(new Event("resize"));
 
             // function setNavbarScroll(){
             //     if($(document).scrollTop() > 60) {
@@ -282,29 +301,6 @@
             //         });
             //     }
             // });
-        });
-
-        //#toTop button appears after scrolling
-        let fixed = false;
-
-        $(document).scroll(function () {
-            if ($(this).scrollTop() > 250) {
-                if (!fixed) {
-                    $('#toTop').css({
-                        bottom: ".5rem",
-                        "pointer-events": "auto",
-                        cursor: "pointer"
-                    });
-                }
-            } else if (fixed) {
-                $('#toTop').css({
-                    bottom: "-2.5rem",
-                    "pointer-events": "none",
-                    cursor: "default"
-                });
-            }
-
-            fixed = !fixed;
         });
 
         function getOffSet() {

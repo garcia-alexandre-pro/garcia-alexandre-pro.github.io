@@ -206,29 +206,30 @@
             //     }
             // });
 
-            // const sections = document.querySelectorAll("section");
-            // const navLi = document.querySelectorAll(".navbar .navbar-nav li a");
+            const sections = document.querySelectorAll("section");
+            const navItems = document.querySelectorAll(".navbar .navbar-nav .page-scroll a");
 
-            // window.addEventListener("scroll", () => {
-            //     let current = "";
+            window.addEventListener("scroll", () => {
+                let current = "";
 
-            //     sections.forEach((section) => {
-            //         const sectionTop = section.offsetTop;
-            //         const sectionHeight = section.clientHeight;
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
 
-            //         if (pageYOffset >= sectionTop - sectionHeight / 3) {
-            //             current = section.getAttribute("id");
-            //         }
-            //     });
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute("id");
+                    }
+                });
 
-            //     navLi.forEach((li) => {
-            //         li.classList.remove("active");
+                navItems.forEach((item) => {
+                    item.classList.remove("active");
 
-            //         if (li.classList.contains(current)) {
-            //             li.classList.add("active");
-            //         }
-            //     });
-            // });
+                    if (item.href.endsWith(`#${current}`)) {
+                        item.classList.add("active");
+                    }
+                });
+            });
+
             // Main Section - Background Parallax
 
             background_image_parallax($(".parallax"), 0.30, true);
@@ -237,6 +238,7 @@
             // Handle window resize
             window.addEventListener('resize', function () {
                 background_image_parallax($(".parallax"), 0.30, true);
+                background_image_parallax_2($(".parallax"), 0.80);
             }, true);
 
             // function setNavbarScroll(){
@@ -249,7 +251,7 @@
 
             // setNavbarScroll();
 
-            // // Detect window scroll and update navbar
+            // // Detects window scroll and collapses navbar
             // $(window).scroll(function(e){
             //     setNavbarScroll();
             // });
@@ -278,7 +280,7 @@
             //         }, 400, function () {
             //             window.location.hash = hash;
             //         });
-            //     } // End if
+            //     }
             // });
         });
 

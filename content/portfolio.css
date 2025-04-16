@@ -4,7 +4,7 @@
     --light: #d8e5f3;
     --dark: #1f2c2f;
     --hyperlink: #63a7cf;
-    --hyperlink-active: #74bbe3;
+    --hyperlink-active: #74c4e8;
     --navigation-drawer-overflow: 1rem;
     --navigation-drawer-width: 12rem;
     --navigation-drawer-small-width: calc(100vw - 4rem);
@@ -182,7 +182,7 @@ a {
         }
 
         .navbar .navbar-toggler .hamburger {
-            height: 1.5rem;
+            height: 1.375rem;
             transform: rotate(180deg);
             -webkit-transition: all .28s ease-in-out;
             -moz-transition: all .28s ease-in-out;
@@ -205,7 +205,7 @@ a {
             }
 
                 .navbar .navbar-toggler .hamburger .icon-bar.top-bar {
-                    transform: translateX(.1875rem) translateY(.375rem) rotate(45deg);
+                    transform: translateX(.1875rem) translateY(.25rem) rotate(45deg);
                     transform-origin: 10% 10%;
                 }
 
@@ -215,7 +215,7 @@ a {
                 }
 
                 .navbar .navbar-toggler .hamburger .icon-bar.bottom-bar {
-                    transform: translateX(.1875rem) translateY(1rem) rotate(-45deg);
+                    transform: translateX(.1875rem) translateY(.875rem) rotate(-45deg);
                     transform-origin: 10% 90%;
                 }
 
@@ -228,11 +228,12 @@ a {
         }
 
         .navbar.collapsed .navbar-toggler .hamburger .icon-bar.middle-bar {
+            transform: translateX(0) translateY(.625rem) rotate(0);
             opacity: 1;
         }
 
         .navbar.collapsed .navbar-toggler .hamburger .icon-bar.bottom-bar {
-            transform: translateX(0) translateY(0.875rem) rotate(0);
+            transform: translateX(0) translateY(.875rem) rotate(0);
         }
 
 @media (max-width: 768px) {
@@ -383,11 +384,11 @@ footer {
 
 ::-webkit-scrollbar-thumb {
     background: var(--light);
-    -webkit-transition: all .16s ease-in-out;
+    /*-webkit-transition: all .16s ease-in-out;
     -moz-transition: all .16s ease-in-out;
     -ms-transition: all .16s ease-in-out;
     -o-transition: all .16s ease-in-out;
-    transition: all .16s ease-in-out;
+    transition: all .16s ease-in-out;*/
 }
 
     /*::-webkit-scrollbar-thumb:hover {

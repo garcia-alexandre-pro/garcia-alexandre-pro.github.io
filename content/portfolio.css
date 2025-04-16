@@ -114,9 +114,9 @@ a {
         left: calc(-1 * var(--navigation-drawer-width));
     }
 
-    .navbar.collapsed .navbar-nav li a {
-        pointer-events: none;
-    }
+        .navbar.collapsed .navbar-nav li a {
+            pointer-events: none;
+        }
 
     .navbar .navbar-nav {
         margin-top: 5rem;
@@ -138,7 +138,7 @@ a {
             transition: all .16s ease-in-out;
         }
 
-            .navbar .navbar-nav li a:hover {
+            .navbar .navbar-nav li a:is(:hover, .active) {
                 background-color: var(--primary);
                 color: var(--light) !important;
             }

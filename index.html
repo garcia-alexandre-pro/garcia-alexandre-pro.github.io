@@ -186,24 +186,100 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
     <script src="js/ripple.js"></script>
     <script>
         // Scrolls to the selected menu item on the page
         $(function () {
-            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').on("click", function () {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                    let target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // $("a[href*='#']:not([href='#'], [data-toggle], [data-target])").on("click", function () {
+            //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+            //         let target = $(this.hash);
+            //         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
+            //         if (target.length) {
+            //             $('html,body').animate({
+            //                 scrollTop: target.offset().top
+            //             }, 1000);
 
-                        return false;
-                    }
+            //             return false;
+            //         }
+            //     }
+            // });
+
+            // const sections = document.querySelectorAll("section");
+            // const navLi = document.querySelectorAll(".navbar .navbar-nav li a");
+
+            // window.addEventListener("scroll", () => {
+            //     let current = "";
+
+            //     sections.forEach((section) => {
+            //         const sectionTop = section.offsetTop;
+            //         const sectionHeight = section.clientHeight;
+
+            //         if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            //             current = section.getAttribute("id");
+            //         }
+            //     });
+
+            //     navLi.forEach((li) => {
+            //         li.classList.remove("active");
+
+            //         if (li.classList.contains(current)) {
+            //             li.classList.add("active");
+            //         }
+            //     });
+            // });
+            // Main Section - Background Parallax
+
+            background_image_parallax($(".parallax"), 0.30, true);
+            background_image_parallax_2($(".parallax"), 0.80);
+
+            // Handle window resize
+            window.addEventListener('resize', function () {
+                background_image_parallax($(".parallax"), 0.30, true);
+            }, true);
+
+            // function setNavbarScroll(){
+            //     if($(document).scrollTop() > 60) {
+            //         $('.navbar').addClass("scroll");
+            //     } else {
+            //         $('.navbar').removeClass("scroll");
+            //     }
+            // }
+
+            // setNavbarScroll();
+
+            // // Detect window scroll and update navbar
+            // $(window).scroll(function(e){
+            //     setNavbarScroll();
+            // });
+
+            // Close mobile menu after click
+
+            $('.navbar-toggler').on('click', function () {
+                $('.navbar').toggleClass('collapsed');
+            })
+
+            $('#mainNav a, header, section, footer').on('click', function (e) {
+                if (!$('.navbar').hasClass('collapsed')) {
+                    $('.navbar').addClass('collapsed');
                 }
-            });
+            })
+
+            // // Add smooth scrolling to all links
+            // // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+            // $("a").on('click', function (event) {
+            //     if (this.hash !== "") {
+            //         event.preventDefault();
+            //         let hash = this.hash;
+
+            //         $('html, body').animate({
+            //             scrollTop: $(hash).offset().top
+            //         }, 400, function () {
+            //             window.location.hash = hash;
+            //         });
+            //     } // End if
+            // });
         });
 
         //#toTop button appears after scrolling
@@ -230,8 +306,8 @@
         });
 
         function getOffSet() {
-            // var _offset = 300;
-            // var windowHeight = window.innerHeight;
+            // let _offset = 300;
+            // let windowHeight = window.innerHeight;
 
             // if(windowHeight > 500) {
             //   _offset = 200;
@@ -288,62 +364,6 @@
                 $object.css({ "background-position": bg_css });
             });
         };
-
-        $(function () {
-            // Main Section - Background Parallax
-            background_image_parallax($(".parallax"), 0.30, true);
-            background_image_parallax_2($(".parallax"), 0.80);
-
-            // Handle window resize
-            window.addEventListener('resize', function () {
-                background_image_parallax($(".parallax"), 0.30, true);
-            }, true);
-
-            // function setNavbarScroll(){
-            //   if($(document).scrollTop() > 60) {
-            //     $('.navbar').addClass("scroll");
-            //   } else {
-            //     $('.navbar').removeClass("scroll");
-            //   }
-            // }
-
-            // setNavbarScroll();
-
-            // // Detect window scroll and update navbar
-            // $(window).scroll(function(e){
-            //   setNavbarScroll();
-            // });
-
-            // Close mobile menu after click
-
-            $('.navbar-toggler').on('click', function () {
-                $('.navbar').toggleClass('collapsed');
-            })
-
-            $('#mainNav a, header, section, footer').on('click', function (e) {
-                if (!$('.navbar').hasClass('collapsed')) {
-                    $('.navbar').addClass('collapsed');
-                }
-            })
-
-            // Scroll to corresponding section with animation
-            $('#mainNav').singlePageNav();
-
-            // Add smooth scrolling to all links
-            // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
-            $("a").on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    let hash = this.hash;
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 400, function () {
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
     </script>
 </body>
 </html>

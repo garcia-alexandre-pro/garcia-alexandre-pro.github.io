@@ -372,3 +372,24 @@ footer {
     -o-transition: bottom .16s ease-in-out;
     transition: bottom .16s ease-in-out;
 }
+
+::-webkit-scrollbar {
+    width: .25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light);
+    -webkit-transition: all .16s ease-in-out;
+    -moz-transition: all .16s ease-in-out;
+    -ms-transition: all .16s ease-in-out;
+    -o-transition: all .16s ease-in-out;
+    transition: all .16s ease-in-out;
+}
+
+    /*::-webkit-scrollbar-thumb:hover {
+        background: var(--light);
+    }*/

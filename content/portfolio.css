@@ -10,7 +10,7 @@
     --navigation-drawer-small-width: calc(100vw - 4rem);
     --border-radius: .25rem;
     --btn-border-radius: var(--border-radius);
-    --timeline-width: .25rem;
+    --timeline-width: .125rem;
     --timeline-dot-size: 2.5rem;
 }
 
@@ -329,7 +329,7 @@ footer {
         position: absolute;
         top: 0;
         height: calc(100% + 2.5rem);
-        width: .25rem;
+        width: var(--timeline-width);
         display: block;
         z-index: 900;
     }
@@ -341,7 +341,7 @@ footer {
         position: absolute;
         top: .75rem;
         height: var(--timeline-dot-size);
-        width: .25rem;
+        width: var(--timeline-width);
         display: block;
         z-index: 900;
     }

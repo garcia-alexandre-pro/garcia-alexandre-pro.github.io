@@ -37,6 +37,14 @@ body {
     justify-content: center;
 }
 
+    .container:nth-of-type(2n+1) * {
+        justify-content: left;
+    }
+
+    .container:nth-of-type(2n) * {
+        justify-content: right;
+    }
+
 h1 {
     margin: 0;
     padding: 0;

@@ -10,6 +10,8 @@
     --navigation-drawer-small-width: calc(100vw - 4rem);
     --border-radius: .25rem;
     --btn-border-radius: var(--border-radius);
+    --timeline-width: .25rem;
+    --timeline-dot-size: 2.5rem;
 }
 
 /* Global Styles */
@@ -158,7 +160,6 @@ a {
             width: var(--btn-border-radius);
             display: block;
             z-index: 1154;
-            /*border-radius: var(--btn-border-radius);*/
         }
 
         .navbar .navbar-toggler:after {
@@ -171,7 +172,6 @@ a {
             width: var(--btn-border-radius);
             display: block;
             z-index: 1154;
-            /*border-radius: var(--btn-border-radius);*/
         }
 
         .navbar .navbar-toggler .hamburger {
@@ -264,29 +264,6 @@ a {
     background-size: cover;
 }
 
-/* Sections */
-
-.portfolio-item {
-    margin-bottom: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-    .img-portfolio:hover {
-        opacity: 0.8;
-    }
-
-.resume-item {
-    margin: 2.5rem 0;
-}
-
 /* Footer */
 
 footer {
@@ -319,7 +296,7 @@ footer {
     display: flex;
     flex-direction: column;
     flex: 1;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     /*align-items: start;
     justify-content: left;*/
@@ -327,13 +304,76 @@ footer {
 
     .container.container-left {
         padding-left: 2.5rem;
-        padding-right: 50%;
+        padding-right: calc(50% - var(--timeline-width) / 2);
     }
 
     .container.container-right {
-        padding-left: 50%;
+        padding-left: calc(50% - var(--timeline-width) / 2);
         padding-right: 2.5rem;
     }
+
+.portfolio-item {
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+    .portfolio-item:before {
+        content: "";
+        background-color: var(--light);
+        opacity: .25;
+        position: absolute;
+        top: 0;
+        height: calc(100% + 2.5rem);
+        width: .25rem;
+        display: block;
+        z-index: 900;
+    }
+
+    .portfolio-item:after {
+        content: "";
+        background-color: var(--light);
+        opacity: 1;
+        position: absolute;
+        top: .75rem;
+        height: var(--timeline-dot-size);
+        width: .25rem;
+        display: block;
+        z-index: 900;
+    }
+
+.container.container-left .portfolio-item:before, .container.container-left .portfolio-item:after {
+    right: 0;
+}
+
+.container.container-right .portfolio-item:before, .container.container-right .portfolio-item:after {
+    left: 0;
+}
+
+.resume-item {
+    margin: 5rem 0;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+    .img-portfolio:hover {
+        opacity: 0.8;
+    }
+
+.footer-item {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    justify-content: center;
+}
 
 /* Parallax */
 

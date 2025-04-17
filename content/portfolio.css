@@ -8,7 +8,8 @@
     --navigation-drawer-overflow: 1rem;
     --navigation-drawer-width: 12rem;
     --navigation-drawer-small-width: calc(100vw - 4rem);
-    --btn-border-radius: .25rem;
+    --border-radius: .25rem;
+    --btn-border-radius: var(--border-radius);
 }
 
 /* Global Styles */
@@ -299,7 +300,15 @@ footer {
 /* Sections */
 
 .section {
-    padding: 2.5rem;
+    min-height: calc(100vh - 2 * 5rem);
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+    .section {
+        min-height: calc(100vh - 2 * 2.5rem);
+        padding: 2.5rem;
+    }
 }
 
 /* Parallax */
@@ -388,6 +397,7 @@ footer {
 
 ::-webkit-scrollbar-thumb {
     background: var(--light);
+    border-radius: var(--border-radius);
     /*-webkit-transition: all .16s ease-in-out;
     -moz-transition: all .16s ease-in-out;
     -ms-transition: all .16s ease-in-out;

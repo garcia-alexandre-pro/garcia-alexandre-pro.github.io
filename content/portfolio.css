@@ -354,6 +354,19 @@ footer {
     left: 0;
 }
 
+.section .container * {
+    filter: blur(0);
+    -webkit-transition: filter .16s ease-in-out;
+    -moz-transition: filter .16s ease-in-out;
+    -ms-transition: filter .16s ease-in-out;
+    -o-transition: filter .16s ease-in-out;
+    transition: filter .16s ease-in-out;
+}
+
+.section.unread .container * {
+    filter: blur(.5rem);
+}
+
 .resume-item {
     margin: 5rem 0;
 }

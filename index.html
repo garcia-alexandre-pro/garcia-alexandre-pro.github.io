@@ -49,17 +49,17 @@
     </header>
 
     <!-- Presentation -->
-    <section id="presentation" class="section section-100-vh bg-primary">
+    <section id="presentation" class="section section-100-vh bg-primary unread">
         <div class="container">
             <h2>Alexandre, 29 ans, développeur .NET</h2>
             <p class="lead">
-                <br />TODO
+                <br />Développeur .Net depuis plusieurs années maintenant,
             </p>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section section-100-vh bg-dark-primary noise">
+    <section id="skills" class="section section-100-vh bg-dark-primary noise unread">
         <div class="container container-left">
             <h2>Comp&eacute;tences</h2>
             <div class="portfolio-item">
@@ -86,7 +86,7 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="section section-100-vh bg-primary">
+    <section id="experience" class="section section-100-vh bg-primary unread">
         <div class="container container-right">
             <h2>Exp&eacute;rience</h2>
             <div class="portfolio-item">
@@ -119,7 +119,7 @@
     </section>
 
     <!-- Formation -->
-    <section id="formation" class="section section-100-vh bg-dark-primary noise">
+    <section id="formation" class="section section-100-vh bg-dark-primary noise unread">
         <div class="container container-left">
             <h2>Formation</h2>
             <div class="portfolio-item">
@@ -152,7 +152,7 @@
         </div>
     </section>
 
-    <section class="section bg-primary">
+    <section class="section bg-primary unread">
         <div class="container">
             <div class="resume-item">
                 <span class="fa-stack fa-2x">
@@ -217,6 +217,8 @@
 
                     if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
                         current = section.getAttribute("id");
+
+                        section.classList.remove("unread");
                     }
                 });
 

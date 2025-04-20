@@ -301,6 +301,7 @@ footer {
     }
 
         .section.section-100-vh {
+            /*min-height: -webkit-fill-available;*/
             min-height: calc(100vh - 2 * 2.5rem);
         }
 }

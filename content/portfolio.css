@@ -363,8 +363,28 @@ footer {
     transition: filter .16s ease-in-out;
 }
 
+.section .container .portfolio-item > * {
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-transition: margin .16s ease-in-out;
+    -moz-transition: margin .16s ease-in-out;
+    -ms-transition: margin .16s ease-in-out;
+    -o-transition: margin .16s ease-in-out;
+    transition: margin .16s ease-in-out;
+}
+
 .section.unread .container * {
     filter: blur(.5rem);
+}
+
+.section.unread .container.container-left .portfolio-item > * {
+    margin-left: -2rem;
+    margin-right: 2rem;
+}
+
+.section.unread .container.container-right .portfolio-item > * {
+    margin-left: 2rem;
+    margin-right: -2rem;
 }
 
 .resume-item {

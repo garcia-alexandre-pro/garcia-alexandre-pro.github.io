@@ -102,6 +102,7 @@ a {
     position: fixed;
     top: 0;
     left: calc(-1 * var(--navigation-drawer-overflow));
+    min-height: -webkit-fill-available;
     height: 100vh;
     width: calc(var(--navigation-drawer-width) + var(--navigation-drawer-overflow));
     border-color: unset;
@@ -242,6 +243,7 @@ a {
 
 @media (max-width: 768px) {
     .navbar {
+        min-height: -webkit-fill-available;
         width: calc(var(--navigation-drawer-small-width) + var(--navigation-drawer-overflow));
         -webkit-transition: all .35s cubic-bezier(.49,.07,.27,1.2);
         -moz-transition: all .35s cubic-bezier(.49,.07,.27,1.2);

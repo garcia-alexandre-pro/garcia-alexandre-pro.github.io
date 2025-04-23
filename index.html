@@ -53,7 +53,7 @@
     </header>
 
     <!-- Presentation -->
-    <section id="presentation" class="section section-100-vh bg-primary unread">
+    <section id="presentation" class="section section-100-vh bg-primary">
         <div class="container">
             <h2>Alexandre, 29 ans, développeur .NET</h2>
             <p class="lead">
@@ -129,33 +129,33 @@
                     <br />Développement de deux nouveaux sites web.
                 </p>
             </div>
-            <h2>Formation</h2>
+            <!-- <h2>Formation</h2> -->
             <div class="portfolio-item">
                 <h3>2015 – 2017</h3>
                 <p class="lead">
                     Brevet de Technicien Supérieur Services Informatiques aux Organisations, spécialité Solutions Logicielles et Applications Métiers, au lycée Saint Michel à Annecy.
                 </p>
-                <a target="_blank" href="http://www.st-michel.fr/">
+                <!-- <a target="_blank" href="http://www.st-michel.fr/">
                     <img class="img-portfolio img-responsive" src="img/st_michel_logo.png">
-                </a>
+                </a> -->
             </div>
             <div class="portfolio-item">
                 <h3>2013 – 2015</h3>
                 <p class="lead">
                     Classe préparatoire intégrée à l’école d’ingénieurs Polytech’ Nice Sophia Antipolis.
                 </p>
-                <a target="_blank" href="http://www.polytechnice.fr/">
+                <!-- <a target="_blank" href="http://www.polytechnice.fr/">
                     <img class="img-portfolio img-responsive" src="img/polytech_logo.jpg">
-                </a>
+                </a> -->
             </div>
             <div class="portfolio-item">
                 <h3>2012 – 2013</h3>
                 <p class="lead">
                     Baccalauréat Scientifique spécialité mathématiques en 2013 avec mention assez bien, au lycée Berthollet à Annecy.
                 </p>
-                <a target="_blank" href="http://www.ac-grenoble.fr/lycee/berthollet.annecy/">
+                <!-- <a target="_blank" href="http://www.ac-grenoble.fr/lycee/berthollet.annecy/">
                     <img class="img-portfolio img-responsive" src="img/berthollet_logo.jpg">
-                </a>
+                </a> -->
             </div>
         </div>
     </section>
@@ -254,7 +254,7 @@
                     const sectionTop = section.offsetTop;
                     const sectionHeight = section.clientHeight;
 
-                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 4) {
                         current = section.getAttribute("id");
 
                         section.classList.remove("unread");

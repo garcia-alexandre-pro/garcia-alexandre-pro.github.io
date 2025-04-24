@@ -532,7 +532,7 @@ footer {
 
 .presentation-scroller {
     border-radius: 2.5rem !important;
-    padding: 1.75rem .25rem .25rem .25rem !important;
+    padding: 1.75rem .375rem .375rem .375rem !important;
     -moz-animation: bounce 10s ease infinite;
     -webkit-animation: bounce 10s ease infinite;
     animation: bounce 10s ease infinite;
@@ -544,7 +544,7 @@ footer {
     cursor: default;
     bottom: -2.5rem;
     right: .5rem;
-    padding: .625rem .4375rem;
+    padding: .625rem .625rem;
     border-radius: 2.5rem !important;
     -webkit-transition: bottom .16s ease-in-out;
     -moz-transition: bottom .16s ease-in-out;

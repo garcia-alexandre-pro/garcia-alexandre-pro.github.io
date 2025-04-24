@@ -19,6 +19,7 @@
 
 html,
 body {
+    position: absolute;
     min-width: 480px;
     max-width: 100%;
     width: 100%;
@@ -297,6 +298,9 @@ footer {
 .section {
     padding: 5rem;
     text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
     .section.section-100-vh {
@@ -466,7 +470,6 @@ footer {
 }
 
 /* Parallax */
-
 .parallax {
     /* Parallax scrolling effect */
     background-attachment: fixed;
@@ -527,13 +530,22 @@ footer {
         background-color: var(--light);
     }
 
+.presentation-scroller {
+    border-radius: 2.5rem !important;
+    padding: 1.75rem .25rem .25rem .25rem !important;
+    -moz-animation: bounce 10s ease infinite;
+    -webkit-animation: bounce 10s ease infinite;
+    animation: bounce 10s ease infinite;
+}
+
 #toTop {
     position: fixed;
     pointer-events: none;
     cursor: default;
     bottom: -2.5rem;
     right: .5rem;
-    padding: .625rem .5rem;
+    padding: .625rem .4375rem;
+    border-radius: 2.5rem !important;
     -webkit-transition: bottom .16s ease-in-out;
     -moz-transition: bottom .16s ease-in-out;
     -ms-transition: bottom .16s ease-in-out;
@@ -570,3 +582,25 @@ footer {
 /*::-webkit-scrollbar-thumb:hover {
         background: var(--light);
     }*/
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    2.5% {
+        transform: translateY(.25rem);
+    }
+
+    5% {
+        transform: translateY(0);
+    }
+
+    7.5% {
+        transform: translateY(.25rem);
+    }
+
+    10% {
+        transform: translateY(0);
+    }
+}

@@ -3,8 +3,8 @@
     --dark-primary: #182f38ca;
     --light: #d8e5f3;
     --dark: #1f2c2f;
-    --hyperlink: #63a7cf;
-    --hyperlink-active: #74c4e8;
+    --hyperlink: #74b8e5;
+    --hyperlink-active: #74caef;
     --navigation-drawer-overflow: 1rem;
     --navigation-drawer-width: 12rem;
     --navigation-drawer-small-width: calc(100vw - 4rem);
@@ -92,11 +92,11 @@ h2 {
 a {
     color: var(--hyperlink);
     text-decoration: none;
-    -webkit-transition: all .16s ease-in-out;
-    -moz-transition: all .16s ease-in-out;
-    -ms-transition: all .16s ease-in-out;
-    -o-transition: all .16s ease-in-out;
-    transition: all .16s ease-in-out;
+    -webkit-transition: color .16s ease-in-out;
+    -moz-transition: color .16s ease-in-out;
+    -ms-transition: color .16s ease-in-out;
+    -o-transition: color .16s ease-in-out;
+    transition: color .16s ease-in-out;
 }
 
     a:hover,
@@ -516,26 +516,26 @@ footer {
     }
 
 .btn-dark {
-    color: var(--light);
+    color: var(--light) !important;
     background-color: var(--dark);
 }
 
     .btn-dark:hover,
     .btn-dark:focus,
     .btn-dark:active {
-        color: var(--light);
+        color: var(--light) !important;
         background-color: var(--dark);
     }
 
 .btn-light {
-    color: var(--dark);
+    color: var(--dark) !important;
     background-color: var(--light);
 }
 
     .btn-light:hover,
     .btn-light:focus,
     .btn-light:active {
-        color: var(--dark);
+        color: var(--dark) !important;
         background-color: var(--light);
     }
 

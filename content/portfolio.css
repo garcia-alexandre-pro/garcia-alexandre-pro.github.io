@@ -543,7 +543,7 @@ footer {
     pointer-events: none;
     cursor: default;
     bottom: -2.5rem;
-    right: .5rem;
+    right: 1rem;
     padding: .625rem .625rem;
     border-radius: 2.5rem !important;
     -webkit-transition: bottom .16s ease-in-out;

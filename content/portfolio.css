@@ -376,7 +376,6 @@ footer {
 
     .portfolio-item:after {
         content: "";
-        background-color: var(--light);
         opacity: 1;
         position: absolute;
         top: .75rem;
@@ -390,6 +389,14 @@ footer {
         -o-transition: all .16s ease-in-out;
         transition: all .16s ease-in-out;
     }
+
+.bg-dark-primary .portfolio-item:after {
+    background-color: var(--light);
+}
+
+.bg-primary .portfolio-item:after {
+    background-color: var(--primary);
+}
 
 .container.container-left .portfolio-item:before, .container.container-left .portfolio-item:after {
     right: 0;

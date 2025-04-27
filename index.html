@@ -79,7 +79,7 @@
             <div class="portfolio-item">
                 <h3>Conception logiciel</h3>
                 <p class="lead">
-                    Expression du besoin, spécifiaction, chiffrage.
+                    Expression du besoin, spécifiaction, chiffrage, méthode agile.
                     <br />Architecture/Design patterns : N-tiers, MVC...
                 </p>
             </div>
@@ -280,46 +280,47 @@
             //#toTop button appears after scrolling
             let fixed = false;
 
-            ["scroll", "touchmove"].forEach(eventType => 
-                window.addEventListener(eventType, () => {
-                    let current = "";
+            let scrollHandler = () => {
+                let current = "";
 
-                    sections.forEach((section) => {
-                        const sectionTop = section.offsetTop;
-                        const sectionHeight = section.clientHeight;
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
 
-                        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-                            current = section.getAttribute("id");
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute("id");
 
-                            section.classList.remove("unread");
-                        }
-                    });
-
-                    navItems.forEach((item) => {
-                        item.classList.remove("active");
-
-                        if (item.href.endsWith(`#${current}`)) {
-                            item.classList.add("active"); // Active menu entry
-                        }
-                    });
-
-                    let toTopBtn = document.querySelector('#toTop');
-
-                    if (window.pageYOffset > 250) {
-                        if (!fixed) {
-                            toTopBtn.style.bottom = "1rem";
-                            toTopBtn.style.pointerEvents = "auto";
-                            toTopBtn.style.cursor = "pointer";
-                        }
-                    } else if (fixed) {
-                        toTopBtn.style.bottom = "-2.5rem";
-                        toTopBtn.style.pointerEvents = "none";
-                        toTopBtn.style.cursor = "default";
+                        section.classList.remove("unread");
                     }
+                });
 
-                    fixed = !fixed;
-                })
-            );
+                navItems.forEach((item) => {
+                    item.classList.remove("active");
+
+                    if (item.href.endsWith(`#${current}`)) {
+                        item.classList.add("active"); // Active menu entry
+                    }
+                });
+
+                let toTopBtn = document.querySelector('#toTop');
+
+                if (window.pageYOffset > 250) {
+                    if (!fixed) {
+                        toTopBtn.style.bottom = "1rem";
+                        toTopBtn.style.pointerEvents = "auto";
+                        toTopBtn.style.cursor = "pointer";
+                    }
+                } else if (fixed) {
+                    toTopBtn.style.bottom = "-2.5rem";
+                    toTopBtn.style.pointerEvents = "none";
+                    toTopBtn.style.cursor = "default";
+                }
+
+                fixed = !fixed;
+            }
+
+            window.addEventListener("scroll", scrollHandler);
+            document.body.addEventListener("touchmove", scrollHandler); // mobile compatibility
 
             window.dispatchEvent(new Event("scroll"));
 

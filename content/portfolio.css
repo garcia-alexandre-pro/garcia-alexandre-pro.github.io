@@ -472,10 +472,15 @@ footer {
 .footer-item {
     margin-bottom: 2.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1;
     align-items: stretch;
     justify-content: center;
+}
+
+.footer-item > a {
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 
 /* Parallax */

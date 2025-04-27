@@ -244,7 +244,9 @@
                 <a class="link" href="mailto:garcia.alexandre.pro@gmail.com"><i class="fa fa-envelope-o fa-fw"></i> garcia.alexandre.pro@gmail.com</a>
             </div>
             <div class="footer-item">
+                <a target="_blank" href="https://github.com/garcia-alexandre-pro/"><i class="fa fa-github fa-fw fa-3x"></i></a>
                 <a target="_blank" href="https://www.linkedin.com/in/garcia-alexandre-pro/"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                <a target="_blank" href="https://stackoverflow.com/users/7424707/alex/"><i class="fa fa-stack-overflow fa-fw fa-3x"></i></a>
             </div>
             <span class="text-muted">Copyright &copy; Portfolio <strong>Alexandre GARCIA</strong></span>
         </div>
@@ -278,44 +280,46 @@
             //#toTop button appears after scrolling
             let fixed = false;
 
-            window.addEventListener("scroll", () => {
-                let current = "";
+            ["scroll", "touchmove"].forEach(eventType => 
+                window.addEventListener(eventType, () => {
+                    let current = "";
 
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
+                    sections.forEach((section) => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
 
-                    if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-                        current = section.getAttribute("id");
+                        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                            current = section.getAttribute("id");
 
-                        section.classList.remove("unread");
+                            section.classList.remove("unread");
+                        }
+                    });
+
+                    navItems.forEach((item) => {
+                        item.classList.remove("active");
+
+                        if (item.href.endsWith(`#${current}`)) {
+                            item.classList.add("active"); // Active menu entry
+                        }
+                    });
+
+                    let toTopBtn = document.querySelector('#toTop');
+
+                    if (window.pageYOffset > 250) {
+                        if (!fixed) {
+                            toTopBtn.style.bottom = "1rem";
+                            toTopBtn.style.pointerEvents = "auto";
+                            toTopBtn.style.cursor = "pointer";
+                        }
+                    } else if (fixed) {
+                        toTopBtn.style.bottom = "-2.5rem";
+                        toTopBtn.style.pointerEvents = "none";
+                        toTopBtn.style.cursor = "default";
                     }
-                });
 
-                navItems.forEach((item) => {
-                    item.classList.remove("active");
-
-                    if (item.href.endsWith(`#${current}`)) {
-                        item.classList.add("active"); // Active menu entry
-                    }
-                });
-
-                let toTopBtn = document.querySelector('#toTop');
-
-                if (window.pageYOffset > 250) {
-                    if (!fixed) {
-                        toTopBtn.style.bottom = "1rem";
-                        toTopBtn.style.pointerEvents = "auto";
-                        toTopBtn.style.cursor = "pointer";
-                    }
-                } else if (fixed) {
-                    toTopBtn.style.bottom = "-2.5rem";
-                    toTopBtn.style.pointerEvents = "none";
-                    toTopBtn.style.cursor = "default";
-                }
-
-                fixed = !fixed;
-            });
+                    fixed = !fixed;
+                })
+            );
 
             window.dispatchEvent(new Event("scroll"));
 

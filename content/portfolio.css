@@ -10,6 +10,7 @@
     --navigation-drawer-small-width: calc(100vw - 4rem);
     --border-radius: .25rem;
     --btn-border-radius: var(--border-radius);
+    --timeline-offset: .75rem;
     --timeline-width: .125rem;
     --timeline-dot-size: 2.5rem;
     --scroll-effect-slide-length: 4rem;
@@ -367,7 +368,7 @@ footer {
         background-color: var(--light);
         opacity: .25;
         position: absolute;
-        top: 0;
+        top: var(--timeline-offset);
         height: calc(100% + 2.5rem);
         width: var(--timeline-width);
         display: block;
@@ -378,7 +379,7 @@ footer {
         content: "";
         opacity: 1;
         position: absolute;
-        top: 0;
+        top: var(--timeline-offset);
         height: var(--timeline-dot-size);
         width: var(--timeline-width);
         display: block;

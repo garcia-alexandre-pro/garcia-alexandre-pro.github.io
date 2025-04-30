@@ -382,6 +382,7 @@ footer {
         top: var(--timeline-offset);
         height: var(--timeline-dot-size);
         width: var(--timeline-width);
+        border-radius: var(--border-radius);
         display: block;
         z-index: 900;
         -webkit-transition: all .16s ease-in-out;
@@ -389,6 +390,14 @@ footer {
         -ms-transition: all .16s ease-in-out;
         -o-transition: all .16s ease-in-out;
         transition: all .16s ease-in-out;
+    }
+
+    .portfolio-item:first-child:before {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    .portfolio-item:last-child:before {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
     }
 
 .bg-dark-primary .portfolio-item:after {

@@ -392,11 +392,11 @@ footer {
         transition: all .16s ease-in-out;
     }
 
-    .portfolio-item:first-child:before {
+    .portfolio-item:first-of-type:before {
         border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
 
-    .portfolio-item:last-child:before {
+    .portfolio-item:last-of-type:before {
         border-radius: 0 0 var(--border-radius) var(--border-radius);
     }
 

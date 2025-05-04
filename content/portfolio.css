@@ -424,9 +424,9 @@ footer {
         padding-right: 0;
     }
 
-    .portfolio-item:before, .portfolio-item:after {
-        display: none;
-    }
+        .portfolio-item:before, .portfolio-item:after {
+            display: none;
+        }
 }
 
 .section .container * {
@@ -488,10 +488,10 @@ footer {
     justify-content: center;
 }
 
-.footer-item > a {
-    padding-left: .5rem;
-    padding-right: .5rem;
-}
+    .footer-item > a {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
 
 /* Parallax */
 .parallax {
@@ -587,7 +587,16 @@ footer {
 
 ::-webkit-scrollbar {
     width: .25rem;
+    /*-webkit-transition: width .16s ease-in-out;
+    -moz-transition: width .16s ease-in-out;
+    -ms-transition: width .16s ease-in-out;
+    -o-transition: width .16s ease-in-out;
+    transition: width .16s ease-in-out;*/
 }
+
+    /*::-webkit-scrollbar:hover {
+        width: .5rem;
+    }*/
 
 ::-webkit-scrollbar-track {
     background: var(--dark);
@@ -603,7 +612,7 @@ footer {
     transition: all .16s ease-in-out;*/
 }
 
-/*::-webkit-scrollbar-thumb:hover {
+    /*::-webkit-scrollbar-thumb:hover {
         background: var(--light);
     }*/
 
